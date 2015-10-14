@@ -1,0 +1,26 @@
+<head>
+  <title>misl</title>
+  <meta content='width=device-width, initial-scale=1' name='viewport'/>
+</head>
+
+<body>
+	<div class="container">
+		<header>
+			<h1>Sierra Leone Miss Independence Philadelphia 2015</h1>
+			<h2>Voting</h2>
+		{{> loginButtons}}
+		</header>
+		<ul>
+			{{# each tasks}}
+				{{> task}}
+			{{/each}}
+ 		</ul>
+	</div>
+</body>
+
+<template name="task">
+  <li>{{text}}<br>
+	<img src="{{image}}" width="80" height="80"><br>
+	<p>Votes: {{votes}}</p>
+	<button class=cand>Vote</button></li>
+</template>
